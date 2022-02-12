@@ -1,0 +1,592 @@
+:root{
+    --background: linear-gradient(100deg, #815e817e 0%, #a65df098 100%);
+    --color-secondary: #764ba2 ;
+    --blanco: #fff;
+    --boton-padding: 20px 40px;
+    --negro: #000;
+    
+
+    --fuenteHeading: 'PT Sans', sans-serif;
+    --fuenteParrafos: 'Open Sans', sans-serif;
+    
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+  }
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    font-family: var(--fuenteParrafos);
+    height: 100vh;
+    background-image: var(--background), url(../img/checko.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    position: relative;
+}
+p{
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--blanco);
+}
+a{
+    text-decoration: none;
+    font-size: 2rem;
+    color: var(--blanco);
+}
+
+.contenedor{
+    max-width: 120rem;
+    margin: 0 auto;
+}
+h1,h2,h3{
+    text-align: center;
+    color: var(--blanco);
+    font-family: var(--fuenteHeading);
+}
+h2{
+    font-size: 3.2rem;
+}
+h3{
+    font-size: 2.4rem;
+}
+.nav{
+    display: flex;
+    justify-content: flex-end;
+    height: 7rem;
+    align-items: center;
+}
+.nav_items{
+    margin-right: 2rem;
+    padding: 1rem 1.5rem;
+    font-weight: inherit;
+}
+
+.nav_items--cta{
+    border: 1px solid var(--blanco);
+    background-color: #fa070733;
+}
+.hero_container{
+    display: flex;
+    height: calc(100vh - 7rem);
+    align-items: center;
+    color: var(--blanco);
+}
+.hero_texts{
+    width: 80%;
+    margin-bottom: 50px;
+}
+
+.hero_title{
+    font-size: 5.2rem;
+}
+
+.hero_subtitle{
+    font-size: 3.5rem;
+    font-weight: 300;
+    margin: 1.5rem 0;
+}
+
+@media screen and (max-width: 500px) {
+    :root{
+        --boton-padding: 18px 35px;
+    }
+    
+    .nav{
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        
+    }
+
+    .nav_items{
+        padding: 0 10px;
+        border: 0;
+    }
+    .hero_texts{
+        text-align: center;
+        margin-bottom: 100px;
+    }
+    
+    .hero_title{
+        font-size: 2rem;
+    }
+}
+@media screen and (max-width:800px) {
+    :root{
+        --boton-padding: 18px 40px;
+    }
+
+    .nav{
+        justify-content: space-around;
+    }
+    
+    .nav_items--cta{
+        border: none;
+    }
+
+    .nav_items{
+        border-bottom: 1px solid;
+        margin-right: 0;
+    }
+
+    .nav_items--footer{
+        border: none;
+    }
+
+    .hero_texts{
+        width: 100%;
+        margin-bottom: 80px;
+    }
+    .hero_title{
+        font-size: 2.5rem;
+    }
+    .hero_subtitle{
+        font-size: 1.5rem;
+    }
+}
+
+.pension,
+.estetica{
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+}
+.img2{
+    grid-row: 2 / 3;
+    border-radius: 3rem;
+    height: 30rem;
+    width: 25rem;
+    margin: auto;
+    box-shadow: 0 0 10px #111111, 0 0 30px #201e20, 0 0 30px #201e20;
+}
+.img3{
+    grid-row: 2 / 3;
+    border-radius: 50%;
+    height: 25rem;
+    width: 25rem;
+    margin: auto;
+    box-shadow: 0 0 10px #111111, 0 0 30px #201e20, 0 0 30px #201e20;
+}
+.part{
+    background-color: var(--primario);
+    border-radius: 2rem;
+    text-align: center;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+.img4{
+    grid-row: 2 / 3;
+    height: 35rem;
+    width: 25rem;
+    margin: auto;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px #111111, 0 0 30px #201e20, 0 0 30px #201e20;
+}
+.Escuela{
+    display: grid;
+    grid-template-rows: 80% 20%;
+}
+@media (min-width: 360px){
+    .navegacion__enlace{
+        font-size: 3rem;
+        margin-right: 3rem;
+    }
+    .Escuela{
+        grid-template-rows: 70% 30%;
+    }
+    .img2{
+        height: 25rem;
+        width: 30rem;
+        margin: auto;
+    }
+    .img3{
+        width: 30rem;
+        height: 30rem;
+    }
+    
+}
+@media (min-width: 365px){
+    .img2{
+        height: 30rem;
+        width: 35rem;
+        margin: auto;
+    }
+    
+}
+@media (min-width: 400px){
+    .img2{
+        height: 30rem;
+        width: 40rem;
+        margin: auto;
+    }
+    .Escuela{
+        grid-template-rows: 2fr 1fr;
+    }
+}
+@media (min-width: 450px){
+    .img2{
+        height: 30rem;
+        width: 45rem;
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+    }
+    .img4{
+        margin-top: 4rem;
+        margin-bottom: 3rem;
+    }
+    
+}
+
+@media (min-width: 768px){
+    .Escuela{
+        grid-template-rows: 1fr 1fr;
+    }
+    .pension,
+    .estetica{
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 2rem;
+        margin-bottom: 4rem;
+    }
+    .img2{
+        margin: auto;
+        grid-row: 1 / 2;
+        grid-column: 2 / 3;
+        height: 30rem;
+        width: 30rem;
+    }
+    .img4{
+        margin: auto;
+        grid-row: 1 / 2;
+        grid-column: 2 / 3;
+        width: 38rem;
+    }
+}
+@media (min-width: 1140px){
+    .pension{
+        grid-template-rows: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .img2{
+        margin: auto;
+        grid-column: 2 / 3;
+        height: 30rem;
+        width: 40rem;
+    }
+    .img4{
+        width: 40rem;
+    }
+}
+
+
+/*nosotros*/
+
+.img7{
+    height: 30rem;
+    width: 27rem;
+    border-radius: 2rem;
+    box-shadow: 0 0 10px #111111, 0 0 30px #201e20, 0 0 30px #201e20;
+}
+.img8{
+    height: 30rem;
+    width: 27rem;
+    border-radius: 2rem;
+    box-shadow: 0 0 10px #111111, 0 0 30px #201e20, 0 0 30px #201e20;
+}
+.nosotros-{
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 3rem;
+}
+.valores{
+    margin-top: 3rem;
+}
+@media (min-width: 450px){
+    .nosotros-{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+    }
+    .img7{
+        grid-column: 2 / 3;
+    }
+    .nostros_vision{
+        grid-column: 2 / 3;
+    }
+    .img8{
+        grid-row: 1 / 2;
+    }
+    .contacto{
+        margin-left: 5rem;
+        margin-right: 5rem;
+    }
+}
+
+@media (min-width: 768px){
+    .img7{
+        width: 40rem;
+        height: 35rem;
+        margin-top: 2rem;
+        margin-left: 2rem;
+    }
+    
+}
+@media (min-width: 1140px){
+    .img8,
+    .img7{
+        width: 45rem;
+        height: 40rem;
+    }
+}
+.inicio{
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+}
+
+/*servicios*/
+.nosotros{
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+    border-radius: 2rem;
+}
+.nosotros_contenido{
+    margin-top: .2rem; 
+}
+.paquetes{
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 2rem;
+}
+.paquete_basico{
+    background-color: #fa070733;
+    box-shadow: 0 0 10px #111111, 0 0 30px #201e20, 0 0 30px #201e20;
+    text-align: center;
+    border-radius: 2rem;
+    margin-bottom: 5rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+.precio{
+    color: var(--blanco);
+    font-size: 4rem;
+}
+@media (min-width: 450px){
+    .img_logo-{
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 3rem;
+    }
+    .paquetes{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+    .paquete_basico-pro{
+        grid-column: 1 / 3;
+        margin-right: 10rem;
+        margin-left: 10rem;
+    }
+}
+
+@media (min-width: 768px){
+    .paquetes{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+    }
+    .paquete_basico-pro{
+        grid-column: 3 / 4;
+        margin-right: 1rem;
+        margin-left: 1rem;
+    }
+    .paquete_basico-inter{
+        margin-bottom: 1rem;
+        margin-top: 2rem;
+    }
+}
+.Serv_estetica-canina{
+    font-size: 4rem;
+}
+.serv_estetica{
+    margin-bottom: 3rem;
+    margin-top: 2rem;
+}
+
+.imagen_1{
+    width: 100%;
+    height: 30rem;
+    box-shadow: 0 0 10px #111111, 0 0 30px #201e20, 0 0 30px #201e20;
+    margin-top: 1rem;
+}
+.img7{
+    height: 30rem;
+    width: 27rem;
+    margin: auto;
+    border-radius: 2rem;
+    box-shadow: 0 0 10px #111111, 0 0 30px #201e20, 0 0 30px #201e20;
+}
+.img8{
+    height: 30rem;
+    width: 27rem;
+    margin: auto;
+    border-radius: 2rem;
+    box-shadow: 0 0 10px #111111, 0 0 30px #201e20, 0 0 30px #201e20;
+}
+.nosotros-{
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+}
+@media (min-width: 450px){
+    .nosotros-{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+    }
+    .img7{
+        grid-column: 2 / 3;
+    }
+    .nostros_vision{
+        grid-column: 2 / 3;
+    }
+    .img8{
+        grid-row: 1 / 2;
+    }
+    .contacto{
+        margin-left: 5rem;
+        margin-right: 5rem;
+    }
+}
+
+@media (min-width: 768px){
+    .img7{
+        width: 40rem;
+        height: 35rem;
+        margin-top: 2rem;
+        margin-left: 2rem;
+    }
+    
+}
+.nuestros-serv{
+    background-color: #fa070733;
+    box-shadow: 0 0 10px #111111, 0 0 30px #201e20, 0 0 30px #201e20;
+}
+@media (min-width: 1140px){
+    .img8{
+        width: 45rem;
+        height: 40rem;
+    }
+    .img7{
+        width: 45rem;
+        height: 40rem;
+    }
+}
+.anuncio{
+    width: 2rem;
+    height: 2rem;
+    text-align: center;
+}
+/*formulario de Contacto*/
+.contacto{
+    border-radius: 2rem;
+    text-align: center;
+}
+/*footer*/
+.footer{
+    background-color: var(--background);
+    text-align: center;
+    padding: 3rem;
+    display: grid;
+    grid-template-rows: 80% 20%;
+}
+.footer__texto{
+    text-align: center;
+    font-size: 1rem;
+    grid-row: 2 / 3;
+    margin-top: 2rem;
+    
+}
+.fb,
+.insta{
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+}
+.Redes{
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+}
+.fb{
+    background-color: #fff;
+}
+.fb_tex{
+    color: #fff;
+    font-size: 2rem;
+}
+@media (min-width:768px){
+    .Redes{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: unset;
+    }
+    .footer{
+        grid-template-rows: unset;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .footer__texto{
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+        margin-top: 20rem;
+        font-size: 2rem;
+    }
+    .fb,
+    .insta{
+        height: 8rem;
+        width: 8rem;
+    }
+    .fb_tex{
+        font-size: 2.5rem;
+    }
+}
+/*whats*/
+.btn-wsp:hover{
+    text-decoration: none;
+    color: #0df053;
+    background: #fff;
+}
+.icon-whatsapp{
+    width: 2rem;
+    height: 2rem;
+    margin-left: .5rem;
+    margin-top: .5rem;
+}
+.btn-wsp{
+    position:fixed;
+    width: 3rem;
+    height: 3rem;
+    border-radius:5rem;
+    line-height: 1.5rem;
+    bottom:30px;
+    right: 30px;
+    background:#0df053; 
+    box-shadow: 0 0 10px #f1efef, 0 0 30px #f1eff1, 0 0 30px #f7f4f7;
+    
+}
+@media (min-width: 768px){
+    .icon-whatsapp{
+        width: 4rem;
+        height: 4rem;
+        margin-left: .5rem;
+        margin-top: .5rem;
+    }
+    .btn-wsp{
+        position:fixed;
+        width: 5rem;
+        height: 5rem;
+        border-radius:5rem;
+        line-height: 15px;
+        bottom:30px;
+        right: 30px;
+        background:#0df053; 
+        box-shadow: 0 0 10px #f1efef, 0 0 30px #f1eff1, 0 0 30px #f7f4f7;
+    }
+}
